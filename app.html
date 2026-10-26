@@ -1,0 +1,21 @@
+    <section class="grid g4 kpis">
+      <div class="card kpi"><span>Tokens (est.)</span><b id="k-tokens">0</b></div>
+      <div class="card kpi"><span>Characters</span><b id="k-chars">0</b></div>
+      <div class="card kpi"><span>Words</span><b id="k-words">0</b></div>
+      <div class="card kpi"><span>Lines</span><b id="k-lines">0</b></div>
+    </section>
+    <section class="grid g2 main">
+      <div class="card">
+        <div class="card-title"><h2>Text</h2><div class="row"><label class="btn small" for="file">Open file</label><input type="file" id="file" hidden /><button class="btn small" id="clear">Clear</button></div></div>
+        <textarea id="in" class="code" spellcheck="false" aria-label="Text"></textarea>
+        <div class="card-title sub"><h2>Token view</h2><label class="check"><input type="checkbox" id="viz" checked /> Show</label></div>
+        <div class="tokview" id="tv"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Cost & context</h2></div>
+        <label class="field"><span>Expected output tokens</span><input type="number" id="outTok" value="1000" min="0" /></label>
+        <label class="field"><span>Requests</span><input type="number" id="reqs" value="1" min="1" /></label>
+        <div class="models" id="models"></div>
+        <p class="muted fine">Token counts are a fast BPE-style estimate (usually within ~10% for English and code). Prices are per 1M tokens and editable — check your provider for current rates.</p>
+      </div>
+    </section>

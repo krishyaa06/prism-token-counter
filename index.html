@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism Token Counter · Prism Protocol</title>
+  <meta name="description" content="Fast in-browser token estimator with token visualisation, per-model cost and context-window meters." />
+  <meta name="theme-color" content="#07080f" />
+  <meta property="og:title" content="Prism Token Counter · Prism Protocol" />
+  <meta property="og:description" content="Fast in-browser token estimator with token visualisation, per-model cost and context-window meters." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>:root{--accent:#00D2FF;--accent-2:#3EE69A}</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">◇</span><b>PRISM</b><span>Token Counter</span></a>
+    <nav>
+      <a class="btn small" href="https://github.com/krishyaa06/prism-token-counter" target="_blank" rel="noreferrer">★ GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">🧮 Vibe Coding</p>
+      <h1>Count tokens <em>before you pay.</em></h1>
+      <p class="lead">Estimate tokens for prompts, files and chats, see how they split, and compare cost and context-window use across popular LLMs.</p>
+    </section>
+    <section class="grid g4 kpis">
+      <div class="card kpi"><span>Tokens (est.)</span><b id="k-tokens">0</b></div>
+      <div class="card kpi"><span>Characters</span><b id="k-chars">0</b></div>
+      <div class="card kpi"><span>Words</span><b id="k-words">0</b></div>
+      <div class="card kpi"><span>Lines</span><b id="k-lines">0</b></div>
+    </section>
+    <section class="grid g2 main">
+      <div class="card">
+        <div class="card-title"><h2>Text</h2><div class="row"><label class="btn small" for="file">Open file</label><input type="file" id="file" hidden /><button class="btn small" id="clear">Clear</button></div></div>
+        <textarea id="in" class="code" spellcheck="false" aria-label="Text"></textarea>
+        <div class="card-title sub"><h2>Token view</h2><label class="check"><input type="checkbox" id="viz" checked /> Show</label></div>
+        <div class="tokview" id="tv"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Cost & context</h2></div>
+        <label class="field"><span>Expected output tokens</span><input type="number" id="outTok" value="1000" min="0" /></label>
+        <label class="field"><span>Requests</span><input type="number" id="reqs" value="1" min="1" /></label>
+        <div class="models" id="models"></div>
+        <p class="muted fine">Token counts are a fast BPE-style estimate (usually within ~10% for English and code). Prices are per 1M tokens and editable — check your provider for current rates.</p>
+      </div>
+    </section>
+
+  </main>
+  <footer class="foot">
+    <span>◇ Prism Token Counter · Part of <a href="https://dc.gg/prismprotocol" target="_blank" rel="noreferrer">Prism Protocol</a></span>
+    <span><a href="https://github.com/krishyaa06/prism-token-counter" target="_blank" rel="noreferrer">Source</a> · MIT License · Runs 100% in your browser</span>
+  </footer>
+  <script src="js/prism.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

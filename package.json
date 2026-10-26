@@ -1,0 +1,30 @@
+{
+  "name": "prism-token-counter",
+  "version": "1.0.0",
+  "description": "Fast in-browser token estimator with token visualisation, per-model cost and context-window meters.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "tokens",
+    "tokenizer",
+    "llm",
+    "openai",
+    "claude",
+    "gemini",
+    "prompt-engineering",
+    "vibe-coding",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-token-counter.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-token-counter/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}
