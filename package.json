@@ -19,6 +19,9 @@
   ],
   "author": "Soumya Bhandare (krishyaa06)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krishyaa06/prism-token-counter/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krishyaa06/prism-token-counter.git"
